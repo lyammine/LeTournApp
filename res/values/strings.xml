@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">LeTournApp_v1_0</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    
+    <string name="button_text_chap_att">Chapel Attendance</string>
+    <string name="button_text_announcements">Announcements</string>
+    
+    <string name="title_activity_chap_att">Chapel Attendance</string>
+    <string name="title_activity_announcements">Announcements</string>
+
+</resources>
