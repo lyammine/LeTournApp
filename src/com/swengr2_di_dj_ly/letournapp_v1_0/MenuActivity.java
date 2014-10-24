@@ -20,6 +20,14 @@ public abstract class MenuActivity extends Activity
 	 * 
 	 * @author Devon Johnson
 	 */
+	
+	/**
+	 * @author Leila Yammine
+	 * This is a test to see if code can be committed to the remote Github repo 
+	 * from directly within the Eclipse workspace using the EGit plugin.
+	 * If the EGit plugin works, commit changes will be seen in the remote repo
+	 */
+	
 	@Override
 	public void onNetworkStateObtained(boolean state) {
 		
