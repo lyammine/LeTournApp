@@ -163,12 +163,52 @@ public class ScheduleHoursActivity extends Activity {
 	private TextView[] sagaTable;
 	private TextView dayView;
 	private String[] dayStrings;
+	private int displayDay;
+	
+//	private final String TAG = "HoursDebug";
+	private final String SAVED_STATE_KEY_DAY = "Day";
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_schedule_hours);
 		initActivityObjects();
+		
+		if (savedInstanceState != null) {
+			displayDay = savedInstanceState.getInt(SAVED_STATE_KEY_DAY);
+		} else {
+		
+			/*
+			 * Explanation of the modular arithmetic below:
+			 * 
+			 * Calendar.get(Calendar.DAY_OF_WEEK) returns the following
+			 * Sunday - 1
+			 * Monday - 2
+			 * Tuesday - 3
+			 * Wednesday - 4
+			 * Thursday - 5
+			 * Friday - 6
+			 * Saturday - 7
+			 * 
+			 * We need this order:
+			 * Sunday - 6
+			 * Monday - 0
+			 * Tuesday - 1
+			 * Wednesday - 2
+			 * Thursday - 3
+			 * Friday - 4
+			 * Saturday - 5
+			 * 
+			 * @author Devon Johnson
+			 */
+			Calendar cal = Calendar.getInstance();
+			displayDay = (cal.get(Calendar.DAY_OF_WEEK) + 5) % DAYS_OF_WEEK.length;
+			// Start display with current day of the week
+			
+		} // end if-else
+		
+		updateLabelsToDay();
+		
 	} // end onCreate
 
 	@Override
@@ -189,7 +229,13 @@ public class ScheduleHoursActivity extends Activity {
 		}
 		return super.onOptionsItemSelected(item);
 	} // end onOptionsItemSelected
-
+	
+	@Override
+	protected void onSaveInstanceState(Bundle outState) {
+		outState.putInt(SAVED_STATE_KEY_DAY, displayDay);
+		super.onSaveInstanceState(outState);
+	}
+	
 	/**
 	 * Inflates the UI objects for use
 	 * in changing the text of labels
@@ -222,35 +268,6 @@ public class ScheduleHoursActivity extends Activity {
 		for (int i = 0; i < DAYS_OF_WEEK.length; i++)
 			dayStrings[i] = getString(DAYS_OF_WEEK[i]);
 		
-		/*
-		 * Explanation of the modular arithmetic below:
-		 * 
-		 * Calendar.get(Calendar.DAY_OF_WEEK) returns the following
-		 * Sunday - 1
-		 * Monday - 2
-		 * Tuesday - 3
-		 * Wednesday - 4
-		 * Thursday - 5
-		 * Friday - 6
-		 * Saturday - 7
-		 * 
-		 * We need this order:
-		 * Sunday - 6
-		 * Monday - 0
-		 * Tuesday - 1
-		 * Wednesday - 2
-		 * Thursday - 3
-		 * Friday - 4
-		 * Saturday - 5
-		 * 
-		 * @author Devon Johnson
-		 */
-		Calendar cal = Calendar.getInstance();
-		int day = (cal.get(Calendar.DAY_OF_WEEK) + 5) % DAYS_OF_WEEK.length;
-		// Start display with current day of the week
-		
-		updateLabelsToDay(day);
-		
 	} // end initActivityObjects
 	
 	/**
@@ -259,20 +276,19 @@ public class ScheduleHoursActivity extends Activity {
 	 * updates the label at the bottom to reflect
 	 * which day has been selected
 	 * 
-	 * @param day 0-6 to reflect the day to display
 	 * @return true if operation is a success
 	 * @author Devon Johnson
 	 */
-	private boolean updateLabelsToDay(int day) {
-		if (day < 0 || day >= DAYS_OF_WEEK.length)
+	private boolean updateLabelsToDay() {
+		if (displayDay < 0 || displayDay >= DAYS_OF_WEEK.length)
 			return false;
 		for (int i = 0; i < ascTable.length; i++)
-			ascTable[i].setText(getString(ASC_HOURS[i][day]));
+			ascTable[i].setText(getString(ASC_HOURS[i][displayDay]));
 		for (int i = 0; i < servTable.length; i++)
-			servTable[i].setText(getString(SERV_HOURS[i][day]));
+			servTable[i].setText(getString(SERV_HOURS[i][displayDay]));
 		for (int i = 0; i < sagaTable.length; i++)
-			sagaTable[i].setText(getString(SAGA_HOURS[i][day]));
-		dayView.setText("Displaying " + dayStrings[day]+ " Hours");
+			sagaTable[i].setText(getString(SAGA_HOURS[i][displayDay]));
+		dayView.setText("Displaying " + dayStrings[displayDay]+ " Hours");
 		return true;
 	} // end updateLabelsToDay
 	
@@ -299,9 +315,10 @@ public class ScheduleHoursActivity extends Activity {
 			@Override
 			public void onClick(DialogInterface dialog, int which) {
 				dayView.setText("Displaying " + dayStrings[which] + " hours");
-				updateLabelsToDay(which);
+				displayDay = which;
+				updateLabelsToDay();
 				dialog.dismiss();
-			}
+			} // end onClick
 		});
 		alert.show();
 		
