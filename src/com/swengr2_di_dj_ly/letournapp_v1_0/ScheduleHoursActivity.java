@@ -166,7 +166,7 @@ public class ScheduleHoursActivity extends Activity {
 	private int displayDay;
 	
 //	private final String TAG = "HoursDebug";
-	private final String SAVED_STATE_KEY_DAY = "Day";
+	private static final String SAVED_STATE_KEY_DAY = "Day";
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {

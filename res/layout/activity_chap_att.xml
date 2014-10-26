@@ -3,7 +3,7 @@
     android:id="@+id/RelativeLayout1"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#0070c0"
+    android:background="@color/LeTournApp_color_blue"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:scrollbars="horizontal|vertical"
     tools:context="com.swengr2_di_dj_ly.letournapp_v1_0.ChapAttActivity" >
@@ -16,7 +16,7 @@
         android:layout_centerHorizontal="true"
         android:paddingBottom="10sp"
         android:text="@string/chap_att_label_initial_text"
-        android:textColor="#ffc000"
+        android:textColor="@color/LeTournApp_color_yellow"
         android:textSize="22sp" />
     
     <ScrollView
@@ -24,7 +24,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/textView1"
-        android:layout_centerHorizontal="true" >
+        android:layout_centerHorizontal="true"
+        android:scrollbars="horizontal|vertical" >
         
         <HorizontalScrollView
            	android:id="@+id/horizontalView" 
