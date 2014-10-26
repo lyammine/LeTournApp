@@ -10,6 +10,10 @@ package com.swengr2_di_dj_ly.letournapp_v1_0;
 public final class R {
     public static final class attr {
     }
+    public static final class color {
+        public static final int LeTournApp_color_blue=0x7f050000;
+        public static final int LeTournApp_color_yellow=0x7f050001;
+    }
     public static final class dimen {
         /**  Default screen margins, per the Android Design guidelines. 
 
@@ -18,39 +22,159 @@ public final class R {
          would include 7" and 10" devices in landscape (~960dp and ~1280dp respectively).
     
          */
-        public static final int activity_horizontal_margin=0x7f040000;
-        public static final int activity_vertical_margin=0x7f040001;
+        public static final int activity_horizontal_margin=0x7f060000;
+        public static final int activity_vertical_margin=0x7f060001;
     }
     public static final class drawable {
         public static final int ic_launcher=0x7f020000;
+        public static final int table_row_border=0x7f020001;
     }
     public static final class id {
-        public static final int RelativeLayout1=0x7f080003;
-        public static final int ScrollView1=0x7f080000;
-        public static final int ScrollView2=0x7f080002;
-        public static final int action_settings=0x7f080006;
-        public static final int announc_button=0x7f080005;
-        public static final int chap_att_button=0x7f080004;
-        public static final int textView1=0x7f080001;
+        public static final int ASC_Table=0x7f09000a;
+        public static final int ASC_Top_Label=0x7f090009;
+        public static final int DayText=0x7f09001a;
+        public static final int Editable_ASC_Coffee_Hours=0x7f09000d;
+        public static final int Editable_ASC_Hive_Hours=0x7f09000c;
+        public static final int Editable_ASC_Mail_Hours=0x7f09000e;
+        public static final int Editable_ASC_Main_Hours=0x7f09000b;
+        public static final int Editable_SAGA_Breakfast_Hours=0x7f090017;
+        public static final int Editable_SAGA_Dinner_Hours=0x7f090019;
+        public static final int Editable_SAGA_Lunch_Hours=0x7f090018;
+        public static final int Editable_Services_Cashier_Hours=0x7f090014;
+        public static final int Editable_Services_FinancialAid_Hours=0x7f090013;
+        public static final int Editable_Services_Library_Hours=0x7f090011;
+        public static final int Editable_Services_Registrar_Hours=0x7f090012;
+        public static final int RelativeLayout1=0x7f090002;
+        public static final int SAGA_Table=0x7f090016;
+        public static final int SAGA_Top_Label=0x7f090015;
+        public static final int ScrollView1=0x7f090000;
+        public static final int Services_Table=0x7f090010;
+        public static final int Services_Top_Label=0x7f09000f;
+        public static final int action_settings=0x7f09001b;
+        public static final int announc_button=0x7f090007;
+        public static final int chap_att_button=0x7f090006;
+        public static final int horizontalView=0x7f090004;
+        public static final int masterRelLayout=0x7f090008;
+        public static final int myScrollView=0x7f090003;
+        public static final int myTableLayout=0x7f090005;
+        public static final int textView1=0x7f090001;
     }
     public static final class layout {
         public static final int activity_announcements=0x7f030000;
         public static final int activity_chap_att=0x7f030001;
         public static final int activity_main=0x7f030002;
+        public static final int activity_schedule_hours=0x7f030003;
     }
     public static final class menu {
-        public static final int announcements=0x7f070000;
-        public static final int chap_att=0x7f070001;
-        public static final int main=0x7f070002;
+        public static final int announcements=0x7f080000;
+        public static final int chap_att=0x7f080001;
+        public static final int main=0x7f080002;
+        public static final int schedule_hours=0x7f080003;
     }
     public static final class string {
-        public static final int action_settings=0x7f050002;
-        public static final int app_name=0x7f050000;
-        public static final int button_text_announcements=0x7f050004;
-        public static final int button_text_chap_att=0x7f050003;
-        public static final int hello_world=0x7f050001;
-        public static final int title_activity_announcements=0x7f050006;
-        public static final int title_activity_chap_att=0x7f050005;
+        public static final int Building_ASC=0x7f040000;
+        public static final int Building_SAGA=0x7f04000a;
+        public static final int Category_Services=0x7f040005;
+        public static final int Day1Title=0x7f04000e;
+        public static final int Day2Title=0x7f04000f;
+        public static final int Day3Title=0x7f040010;
+        public static final int Day4Title=0x7f040011;
+        public static final int Day5Title=0x7f040012;
+        public static final int Day6Title=0x7f040013;
+        public static final int Day7Title=0x7f040014;
+        public static final int Hours_ASC_Hive_and_Coffee_Day1=0x7f04001d;
+        public static final int Hours_ASC_Hive_and_Coffee_Day2=0x7f04001e;
+        public static final int Hours_ASC_Hive_and_Coffee_Day3=0x7f04001f;
+        public static final int Hours_ASC_Hive_and_Coffee_Day4=0x7f040020;
+        public static final int Hours_ASC_Hive_and_Coffee_Day5=0x7f040021;
+        public static final int Hours_ASC_Hive_and_Coffee_Day6=0x7f040022;
+        public static final int Hours_ASC_Hive_and_Coffee_Day7=0x7f040023;
+        public static final int Hours_ASC_Mail_Day1=0x7f040024;
+        public static final int Hours_ASC_Mail_Day2=0x7f040025;
+        public static final int Hours_ASC_Mail_Day3=0x7f040026;
+        public static final int Hours_ASC_Mail_Day4=0x7f040027;
+        public static final int Hours_ASC_Mail_Day5=0x7f040028;
+        public static final int Hours_ASC_Mail_Day6=0x7f040029;
+        public static final int Hours_ASC_Mail_Day7=0x7f04002a;
+        public static final int Hours_ASC_Main_Day1=0x7f040016;
+        public static final int Hours_ASC_Main_Day2=0x7f040017;
+        public static final int Hours_ASC_Main_Day3=0x7f040018;
+        public static final int Hours_ASC_Main_Day4=0x7f040019;
+        public static final int Hours_ASC_Main_Day5=0x7f04001a;
+        public static final int Hours_ASC_Main_Day6=0x7f04001b;
+        public static final int Hours_ASC_Main_Day7=0x7f04001c;
+        public static final int Hours_Placeholder_Text=0x7f040015;
+        public static final int Hours_SAGA_Breakfast_Day1=0x7f040047;
+        public static final int Hours_SAGA_Breakfast_Day2=0x7f040048;
+        public static final int Hours_SAGA_Breakfast_Day3=0x7f040049;
+        public static final int Hours_SAGA_Breakfast_Day4=0x7f04004a;
+        public static final int Hours_SAGA_Breakfast_Day5=0x7f04004b;
+        public static final int Hours_SAGA_Breakfast_Day6=0x7f04004c;
+        public static final int Hours_SAGA_Breakfast_Day7=0x7f04004d;
+        public static final int Hours_SAGA_Dinner_Day1=0x7f040055;
+        public static final int Hours_SAGA_Dinner_Day2=0x7f040056;
+        public static final int Hours_SAGA_Dinner_Day3=0x7f040057;
+        public static final int Hours_SAGA_Dinner_Day4=0x7f040058;
+        public static final int Hours_SAGA_Dinner_Day5=0x7f040059;
+        public static final int Hours_SAGA_Dinner_Day6=0x7f04005a;
+        public static final int Hours_SAGA_Dinner_Day7=0x7f04005b;
+        public static final int Hours_SAGA_Lunch_Day1=0x7f04004e;
+        public static final int Hours_SAGA_Lunch_Day2=0x7f04004f;
+        public static final int Hours_SAGA_Lunch_Day3=0x7f040050;
+        public static final int Hours_SAGA_Lunch_Day4=0x7f040051;
+        public static final int Hours_SAGA_Lunch_Day5=0x7f040052;
+        public static final int Hours_SAGA_Lunch_Day6=0x7f040053;
+        public static final int Hours_SAGA_Lunch_Day7=0x7f040054;
+        public static final int Hours_Services_Cashier_Day1=0x7f040040;
+        public static final int Hours_Services_Cashier_Day2=0x7f040041;
+        public static final int Hours_Services_Cashier_Day3=0x7f040042;
+        public static final int Hours_Services_Cashier_Day4=0x7f040043;
+        public static final int Hours_Services_Cashier_Day5=0x7f040044;
+        public static final int Hours_Services_Cashier_Day6=0x7f040045;
+        public static final int Hours_Services_Cashier_Day7=0x7f040046;
+        public static final int Hours_Services_FinancialAid_Day1=0x7f040039;
+        public static final int Hours_Services_FinancialAid_Day2=0x7f04003a;
+        public static final int Hours_Services_FinancialAid_Day3=0x7f04003b;
+        public static final int Hours_Services_FinancialAid_Day4=0x7f04003c;
+        public static final int Hours_Services_FinancialAid_Day5=0x7f04003d;
+        public static final int Hours_Services_FinancialAid_Day6=0x7f04003e;
+        public static final int Hours_Services_FinancialAid_Day7=0x7f04003f;
+        public static final int Hours_Services_Library_Day1=0x7f04002b;
+        public static final int Hours_Services_Library_Day2=0x7f04002c;
+        public static final int Hours_Services_Library_Day3=0x7f04002d;
+        public static final int Hours_Services_Library_Day4=0x7f04002e;
+        public static final int Hours_Services_Library_Day5=0x7f04002f;
+        public static final int Hours_Services_Library_Day6=0x7f040030;
+        public static final int Hours_Services_Library_Day7=0x7f040031;
+        public static final int Hours_Services_Registrar_Day1=0x7f040032;
+        public static final int Hours_Services_Registrar_Day2=0x7f040033;
+        public static final int Hours_Services_Registrar_Day3=0x7f040034;
+        public static final int Hours_Services_Registrar_Day4=0x7f040035;
+        public static final int Hours_Services_Registrar_Day5=0x7f040036;
+        public static final int Hours_Services_Registrar_Day6=0x7f040037;
+        public static final int Hours_Services_Registrar_Day7=0x7f040038;
+        public static final int Meal_SAGA_Breakfast=0x7f04000b;
+        public static final int Meal_SAGA_Dinner=0x7f04000d;
+        public static final int Meal_SAGA_Lunch=0x7f04000c;
+        public static final int Room_ASC_Coffee=0x7f040003;
+        public static final int Room_ASC_Hive=0x7f040002;
+        public static final int Room_ASC_Mail=0x7f040004;
+        public static final int Room_ASC_Main=0x7f040001;
+        public static final int Subcat_Services_Cashier=0x7f040009;
+        public static final int Subcat_Services_FinancialAid=0x7f040008;
+        public static final int Subcat_Services_Library=0x7f040006;
+        public static final int Subcat_Services_Registrar=0x7f040007;
+        public static final int action_settings=0x7f04005e;
+        public static final int app_name=0x7f04005c;
+        public static final int button_text_announcements=0x7f040060;
+        public static final int button_text_chap_att=0x7f04005f;
+        public static final int button_text_hours=0x7f040061;
+        public static final int button_text_hours_change_day=0x7f040066;
+        public static final int chap_att_label_initial_text=0x7f040065;
+        public static final int hello_world=0x7f04005d;
+        public static final int title_activity_announcements=0x7f040063;
+        public static final int title_activity_chap_att=0x7f040062;
+        public static final int title_activity_schedule_hours=0x7f040064;
     }
     public static final class style {
         /** 
@@ -74,10 +198,10 @@ public final class R {
     
  API 14 theme customizations can go here. 
          */
-        public static final int AppBaseTheme=0x7f060000;
+        public static final int AppBaseTheme=0x7f070000;
         /**  Application theme. 
  All customizations that are NOT specific to a particular API-level can go here. 
          */
-        public static final int AppTheme=0x7f060001;
+        public static final int AppTheme=0x7f070001;
     }
 }

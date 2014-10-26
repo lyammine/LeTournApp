@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+    
+    <string name="Day1Title">Monday</string>
+	<string name="Day2Title">Tuesday</string>
+	<string name="Day3Title">Wednesday</string>
+	<string name="Day4Title">Thursday</string>
+	<string name="Day5Title">Friday</string>
+    <string name="Day6Title">Saturday</string>
+    <string name="Day7Title">Sunday</string>
+    
+</resources>
