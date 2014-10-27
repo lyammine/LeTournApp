@@ -29,10 +29,12 @@ public final class R {
     public static final class id {
         public static final int RelativeLayout1=0x7f080002;
         public static final int ScrollView1=0x7f080000;
-        public static final int action_settings=0x7f080008;
+        public static final int action_settings=0x7f08000a;
         public static final int announc_button=0x7f080007;
         public static final int chap_att_button=0x7f080006;
         public static final int horizontalView=0x7f080004;
+        public static final int hours_button=0x7f080008;
+        public static final int login_info_button=0x7f080009;
         public static final int myScrollView=0x7f080003;
         public static final int myTableLayout=0x7f080005;
         public static final int textView1=0x7f080001;
@@ -87,5 +89,8 @@ public final class R {
  All customizations that are NOT specific to a particular API-level can go here. 
          */
         public static final int AppTheme=0x7f060001;
+        /**  Menu Button theme 
+         */
+        public static final int MenuButton=0x7f060002;
     }
 }
