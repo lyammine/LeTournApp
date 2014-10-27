@@ -105,6 +105,21 @@ public class ChapAttActivity extends MenuActivity {
 	} // end onExceptionRetrievingNetworkData
 	
 	/**
+	 * Called when Refresh button is pressed.
+	 * Fixes issue where user would have to exit
+	 * back to the main screen and come back to
+	 * ChapAtt in order to re-enter credentials
+	 * in the event of credential failure or
+	 * lack of credentials.
+	 * 
+	 * @param view Required for onClick method. Unused
+	 * @author Devon Johnson
+	 */
+	public void refreshPage(View view) {
+		initActivityObjects();
+	} // end refresh
+	
+	/**
 	 * Inflates the UI objects for use in
 	 * data manipulation. Also initializes
 	 * the Networking thread.
@@ -120,6 +135,7 @@ public class ChapAttActivity extends MenuActivity {
 		
 		myTextView = (TextView) findViewById(R.id.textView1);
 		chapelTable = (TableLayout) findViewById(R.id.myTableLayout);
+		chapelTable.removeAllViews();
 		
 		if (username == null || password == null) {
 			
@@ -154,8 +170,7 @@ public class ChapAttActivity extends MenuActivity {
 			
 		} else {
 			initNetwork();
-		}
-		// end if
+		} // end if-else
 		
 	} // end initActivityObjects
 	
@@ -278,14 +293,14 @@ public class ChapAttActivity extends MenuActivity {
 	        	tv1.setBackgroundResource(R.drawable.table_row_border);
 	        	tv1.setGravity(Gravity.CENTER);
 	        	tv1.setPadding(15, 20, 15, 20);
-	        	tv1.setTextSize(20);
+	        	tv1.setTextSize(16);
 	        	
 	        	TextView tv2 = new TextView(this);
 	        	tv2.setText(chap.getDescription());
 	        	tv2.setBackgroundResource(R.drawable.table_row_border);
 	        	tv2.setGravity(Gravity.LEFT);
 	        	tv2.setPadding(15, 20, 15, 20);
-	        	tv2.setTextSize(20);
+	        	tv2.setTextSize(16);
 	        	tv2.setLines(2);
 	        	
 	        	row.addView(tv1);
@@ -398,9 +413,9 @@ public class ChapAttActivity extends MenuActivity {
 		
 	} // end ChapelOpportunity class
 
-	private class ChapelClickListener implements OnClickListener {
-		ChapelOpportunity chap;
-		Context context;
+	private static class ChapelClickListener implements OnClickListener {
+		private ChapelOpportunity chap;
+		private Context context;
 		
 		public ChapelClickListener(ChapelOpportunity chap, Context context) {
 			this.chap = chap;
@@ -421,14 +436,11 @@ public class ChapAttActivity extends MenuActivity {
 			alert.setView(tv);
 			
 			alert.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
-				
 				@Override
-				public void onClick(DialogInterface arg0, int arg1) {
-					// TODO Auto-generated method stub
-					
+				public void onClick(DialogInterface dialog, int arg1) {
+					dialog.dismiss();
 				}
 			});
-			
 			alert.show();
 			
 		} // end run

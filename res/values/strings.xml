@@ -13,7 +13,9 @@
     <string name="title_activity_announcements">Announcements</string>
     <string name="title_activity_schedule_hours">Hours</string>
     
-	<string name="chap_att_label_initial_text">Loading&#8230;</string>
+	<string name="chap_att_label_initial_text">Waiting on credentials&#8230;</string>
+	<string name="button_text_chap_att_refresh">Refresh</string>
+	
 	<string name="button_text_hours_change_day">Change day</string>
 	
 </resources>
