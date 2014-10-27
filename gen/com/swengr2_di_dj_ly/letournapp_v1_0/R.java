@@ -52,10 +52,13 @@ public final class R {
         public static final int app_name=0x7f050000;
         public static final int button_text_announcements=0x7f050005;
         public static final int button_text_chap_att=0x7f050004;
+        public static final int button_text_hours=0x7f050006;
+        public static final int button_text_login_info=0x7f050007;
         public static final int chap_att_label_initial_text=0x7f050003;
         public static final int hello_world=0x7f050001;
-        public static final int title_activity_announcements=0x7f050007;
-        public static final int title_activity_chap_att=0x7f050006;
+        public static final int title_activity_announcements=0x7f050009;
+        public static final int title_activity_chap_att=0x7f050008;
+        public static final int title_activity_hours=0x7f05000a;
     }
     public static final class style {
         /** 

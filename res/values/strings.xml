@@ -9,8 +9,12 @@
     
     <string name="button_text_chap_att">Chapel Attendance</string>
     <string name="button_text_announcements">Announcements</string>
+    <string name="button_text_hours">Hours</string>
+    <string name="button_text_login_info">Login Settings</string>
     
     <string name="title_activity_chap_att">Chapel Attendance</string>
     <string name="title_activity_announcements">Announcements</string>
+    <string name="title_activity_hours">Hours</string>
 
 </resources>
+
