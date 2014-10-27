@@ -23,14 +23,20 @@ public final class R {
     }
     public static final class drawable {
         public static final int ic_launcher=0x7f020000;
+        public static final int menu_button=0x7f020001;
+        public static final int table_row_border=0x7f020002;
     }
     public static final class id {
-        public static final int RelativeLayout1=0x7f080003;
+        public static final int RelativeLayout1=0x7f080002;
         public static final int ScrollView1=0x7f080000;
-        public static final int ScrollView2=0x7f080002;
-        public static final int action_settings=0x7f080006;
-        public static final int announc_button=0x7f080005;
-        public static final int chap_att_button=0x7f080004;
+        public static final int action_settings=0x7f08000a;
+        public static final int announc_button=0x7f080007;
+        public static final int chap_att_button=0x7f080006;
+        public static final int horizontalView=0x7f080004;
+        public static final int hours_button=0x7f080008;
+        public static final int login_info_button=0x7f080009;
+        public static final int myScrollView=0x7f080003;
+        public static final int myTableLayout=0x7f080005;
         public static final int textView1=0x7f080001;
     }
     public static final class layout {
@@ -46,11 +52,15 @@ public final class R {
     public static final class string {
         public static final int action_settings=0x7f050002;
         public static final int app_name=0x7f050000;
-        public static final int button_text_announcements=0x7f050004;
-        public static final int button_text_chap_att=0x7f050003;
+        public static final int button_text_announcements=0x7f050005;
+        public static final int button_text_chap_att=0x7f050004;
+        public static final int button_text_hours=0x7f050006;
+        public static final int button_text_login_info=0x7f050007;
+        public static final int chap_att_label_initial_text=0x7f050003;
         public static final int hello_world=0x7f050001;
-        public static final int title_activity_announcements=0x7f050006;
-        public static final int title_activity_chap_att=0x7f050005;
+        public static final int title_activity_announcements=0x7f050009;
+        public static final int title_activity_chap_att=0x7f050008;
+        public static final int title_activity_hours=0x7f05000a;
     }
     public static final class style {
         /** 
@@ -79,5 +89,8 @@ public final class R {
  All customizations that are NOT specific to a particular API-level can go here. 
          */
         public static final int AppTheme=0x7f060001;
+        /**  Menu Button theme 
+         */
+        public static final int MenuButton=0x7f060002;
     }
 }
