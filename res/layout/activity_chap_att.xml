@@ -25,7 +25,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/textView1"
         android:layout_above="@+id/chapAttRefreshButton"
-        android:layout_marginBottom="10dp" >
+        android:layout_marginBottom="5dp" >
         
         <HorizontalScrollView
            	android:id="@+id/horizontalView" 
@@ -44,15 +44,10 @@
     
     <Button
         android:id="@+id/chapAttRefreshButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        style="@style/MenuButton"
         android:layout_centerHorizontal="true"
         android:layout_alignParentBottom="true"
-      	android:paddingLeft="10dp"
-      	android:paddingRight="10dp"
-        android:background="@color/LeTournApp_color_yellow"
         android:textSize="16sp"
-        android:textColor="@color/LeTournApp_color_blue"
         android:text="@string/button_text_chap_att_refresh"
         android:onClick="refreshPage" />
     
