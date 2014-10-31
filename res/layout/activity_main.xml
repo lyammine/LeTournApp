@@ -32,6 +32,7 @@
         style="@style/MenuButton"
         android:layout_alignLeft="@+id/announc_button"
         android:layout_below="@+id/announc_button"
+        android:onClick="hoursButtonPressed"
         android:text="@string/button_text_hours" />
     
     <Button 

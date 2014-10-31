@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <string name="Building_ASC">Allen Student Center</string>
+    
+    <string name="Room_ASC_Main">ASC</string>
+    <string name="Room_ASC_Hive">The Hive</string>
+    <string name="Room_ASC_Coffee">Common Grounds</string>
+    <string name="Room_ASC_Mail">Mail Center</string>
+    
+    <string name="Category_Services">Services</string>
+    
+    <string name="Subcat_Services_Library">Library</string>
+    <string name="Subcat_Services_Registrar">Registrar</string>
+    <string name="Subcat_Services_FinancialAid">Financial Aid</string>
+    <string name="Subcat_Services_Cashier">Cashier\'s Window</string>
+    
+    <string name="Building_SAGA">SAGA</string>
+    
+    <string name="Meal_SAGA_Breakfast">Breakfast</string>
+    <string name="Meal_SAGA_Lunch">Lunch</string>
+    <string name="Meal_SAGA_Dinner">Dinner</string>
+    
+</resources>

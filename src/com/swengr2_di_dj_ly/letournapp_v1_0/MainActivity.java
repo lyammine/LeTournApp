@@ -57,6 +57,10 @@ public class MainActivity extends Activity {
     	openNewWindow(AnnouncementsActivity.class);
     } // end announcButtonPressed
     
+    public void hoursButtonPressed(View view) {
+    	openNewWindow(ScheduleHoursActivity.class);
+    }
+    
     private void openNewWindow(Class<?> cls) {
     	Intent intent = new Intent(this, cls);
     	startActivity(intent);
