@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <string name="Hours_Placeholder_Text">Loading&#8230;</string>
+    
+    <string name="Hours_ASC_Main_Day1">7:00 am-2:00 am</string>
+    <string name="Hours_ASC_Main_Day2">7:00 am-2:00 am</string>
+    <string name="Hours_ASC_Main_Day3">7:00 am-2:00 am</string>
+    <string name="Hours_ASC_Main_Day4">7:00 am-2:00 am</string>
+    <string name="Hours_ASC_Main_Day5">7:00 am-2:00 am</string>
+    <string name="Hours_ASC_Main_Day6">7:00 am-2:00 am</string>
+    <string name="Hours_ASC_Main_Day7">7:00 am-2:00 am</string>
+    
+    <string name="Hours_ASC_Hive_and_Coffee_Day1">6:30 am-11:00 pm</string>
+    <string name="Hours_ASC_Hive_and_Coffee_Day2">6:30 am-11:00 pm</string>
+    <string name="Hours_ASC_Hive_and_Coffee_Day3">6:30 am-11:00 pm</string>
+    <string name="Hours_ASC_Hive_and_Coffee_Day4">6:30 am-11:00 pm</string>
+    <string name="Hours_ASC_Hive_and_Coffee_Day5">6:30 am-11:00 pm</string>
+    <string name="Hours_ASC_Hive_and_Coffee_Day6">6:30 pm-11:00 pm</string>
+    <string name="Hours_ASC_Hive_and_Coffee_Day7">5:30 pm-11:00 pm</string>
+    
+    <string name="Hours_ASC_Mail_Day1">9:00 am-5:30 pm</string>
+    <string name="Hours_ASC_Mail_Day2">9:00 am-5:30 pm</string>
+    <string name="Hours_ASC_Mail_Day3">9:00 am-5:30 pm</string>
+    <string name="Hours_ASC_Mail_Day4">9:00 am-5:30 pm</string>
+    <string name="Hours_ASC_Mail_Day5">9:00 am-5:30 pm</string>
+    <string name="Hours_ASC_Mail_Day6">Closed</string>
+    <string name="Hours_ASC_Mail_Day7">Closed</string>
+    
+    <string name="Hours_Services_Library_Day1">8:00 am-12:00 am</string>
+    <string name="Hours_Services_Library_Day2">8:00 am-12:00 am</string>
+    <string name="Hours_Services_Library_Day3">8:00 am-12:00 am</string>
+    <string name="Hours_Services_Library_Day4">8:00 am-12:00 am</string>
+    <string name="Hours_Services_Library_Day5">8:00 am-5:00 pm</string>
+    <string name="Hours_Services_Library_Day6">10:00 am-5:00 pm</string>
+    <string name="Hours_Services_Library_Day7">1:00 pm-12:00 am</string>
+    
+    <string name="Hours_Services_Registrar_Day1">8:00 am-5:00 pm</string>
+    <string name="Hours_Services_Registrar_Day2">8:00 am-5:00 pm</string>
+    <string name="Hours_Services_Registrar_Day3">8:00 am-5:00 pm</string>
+    <string name="Hours_Services_Registrar_Day4">8:00 am-5:00 pm</string>
+    <string name="Hours_Services_Registrar_Day5">8:00 am-5:00 pm</string>
+    <string name="Hours_Services_Registrar_Day6">Closed</string>
+    <string name="Hours_Services_Registrar_Day7">Closed</string>
+    
+    <string name="Hours_Services_FinancialAid_Day1">8:00 am-5:00 pm</string>
+    <string name="Hours_Services_FinancialAid_Day2">8:00 am-5:00 pm</string>
+    <string name="Hours_Services_FinancialAid_Day3">8:00 am-5:00 pm</string>
+    <string name="Hours_Services_FinancialAid_Day4">8:00 am-5:00 pm</string>
+    <string name="Hours_Services_FinancialAid_Day5">8:00 am-5:00 pm</string>
+    <string name="Hours_Services_FinancialAid_Day6">Closed</string>
+    <string name="Hours_Services_FinancialAid_Day7">Closed</string>
+    
+    <string name="Hours_Services_Cashier_Day1">9:00 am-4:00 pm</string>
+    <string name="Hours_Services_Cashier_Day2">9:00 am-4:00 pm</string>
+    <string name="Hours_Services_Cashier_Day3">9:00 am-4:00 pm</string>
+    <string name="Hours_Services_Cashier_Day4">9:00 am-4:00 pm</string>
+    <string name="Hours_Services_Cashier_Day5">9:00 am-4:00 pm</string>
+    <string name="Hours_Services_Cashier_Day6">Closed</string>
+    <string name="Hours_Services_Cashier_Day7">Closed</string>
+    
+    <string name="Hours_SAGA_Breakfast_Day1">6:30 am-9:30 am</string>
+    <string name="Hours_SAGA_Breakfast_Day2">6:30 am-9:30 am</string>
+    <string name="Hours_SAGA_Breakfast_Day3">6:30 am-9:30 am</string>
+    <string name="Hours_SAGA_Breakfast_Day4">6:30 am-9:30 am</string>
+    <string name="Hours_SAGA_Breakfast_Day5">6:30 am-9:30 am</string>
+    <string name="Hours_SAGA_Breakfast_Day6">With Lunch</string>
+    <string name="Hours_SAGA_Breakfast_Day7">8:00 am-9:15 am</string>
+    
+    <string name="Hours_SAGA_Lunch_Day1">11:30 am-1:30 pm</string>
+    <string name="Hours_SAGA_Lunch_Day2">10:50 am-1:30 pm</string>
+    <string name="Hours_SAGA_Lunch_Day3">11:30 am-1:30 pm</string>
+    <string name="Hours_SAGA_Lunch_Day4">10:50 am-1:30 pm</string>
+    <string name="Hours_SAGA_Lunch_Day5">11:30 am-1:30 pm</string>
+    <string name="Hours_SAGA_Lunch_Day6">11:30 am-1:30 pm</string>
+    <string name="Hours_SAGA_Lunch_Day7">11:30 am-1:30 pm</string>
+    
+    <string name="Hours_SAGA_Dinner_Day1">4:45 pm-7:00 pm</string>
+    <string name="Hours_SAGA_Dinner_Day2">4:45 pm-7:00 pm</string>
+    <string name="Hours_SAGA_Dinner_Day3">4:45 pm-7:00 pm</string>
+    <string name="Hours_SAGA_Dinner_Day4">4:45 pm-7:00 pm</string>
+    <string name="Hours_SAGA_Dinner_Day5">4:45 pm-7:00 pm</string>
+    <string name="Hours_SAGA_Dinner_Day6">4:45 pm-6:00 pm</string>
+    <string name="Hours_SAGA_Dinner_Day7">Closed</string>
+    
+</resources>

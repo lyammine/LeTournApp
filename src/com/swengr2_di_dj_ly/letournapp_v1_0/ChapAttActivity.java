@@ -35,6 +35,12 @@ public class ChapAttActivity extends MenuActivity {
 	protected int creditsRecorded;
 	protected int creditsRequired;
 	
+	private String username;
+	private String password;
+	
+	public static final String SAVED_USERNAME_KEY = "Username";
+	public static final String SAVED_PASSWORD_KEY = "Password";
+	
 	protected ArrayList<ChapelOpportunity> chapels;
 
 	@Override
@@ -42,6 +48,11 @@ public class ChapAttActivity extends MenuActivity {
 		
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_chap_att);
+		
+		if (savedInstanceState != null) {
+			username = savedInstanceState.getString(SAVED_USERNAME_KEY);
+			password = savedInstanceState.getString(SAVED_PASSWORD_KEY);
+		} // end if
 		
 		initActivityObjects();
 		
@@ -67,6 +78,15 @@ public class ChapAttActivity extends MenuActivity {
 	}
 
 	@Override
+	protected void onSaveInstanceState(Bundle outState) {
+		if (username != null && password != null) {
+			outState.putString(SAVED_USERNAME_KEY, username);
+			outState.putString(SAVED_PASSWORD_KEY, password);
+		}
+		super.onSaveInstanceState(outState);
+	}
+	
+	@Override
 	public void onWebPageReaderObtained(BufferedReader reader) {
 		
 		networkReader = reader;
@@ -85,6 +105,21 @@ public class ChapAttActivity extends MenuActivity {
 	} // end onExceptionRetrievingNetworkData
 	
 	/**
+	 * Called when Refresh button is pressed.
+	 * Fixes issue where user would have to exit
+	 * back to the main screen and come back to
+	 * ChapAtt in order to re-enter credentials
+	 * in the event of credential failure or
+	 * lack of credentials.
+	 * 
+	 * @param view Required for onClick method. Unused
+	 * @author Devon Johnson
+	 */
+	public void refreshPage(View view) {
+		initActivityObjects();
+	} // end refresh
+	
+	/**
 	 * Inflates the UI objects for use in
 	 * data manipulation. Also initializes
 	 * the Networking thread.
@@ -100,44 +135,48 @@ public class ChapAttActivity extends MenuActivity {
 		
 		myTextView = (TextView) findViewById(R.id.textView1);
 		chapelTable = (TableLayout) findViewById(R.id.myTableLayout);
+		chapelTable.removeAllViews();
 		
-		AlertDialog.Builder alert = new AlertDialog.Builder(this);
-		alert.setTitle("Credentials");
-		alert.setMessage("Enter username and password");
-		final EditText nameText = new EditText(this);
-		nameText.setHint("Username");
-		final EditText passText = new EditText(this);
-		passText.setHint("Password");
-		passText.setInputType(InputType.TYPE_CLASS_TEXT | 
-				InputType.TYPE_TEXT_VARIATION_PASSWORD);
-		TableLayout tbl = new TableLayout(this);
-		tbl.addView(nameText);
-		tbl.addView(passText);
-		alert.setView(tbl);
-		
-		alert.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
-			public void onClick(DialogInterface dialog, int whichButton) {
-				String username = nameText.getText().toString();
-				String password = passText.getText().toString();
-				networkChannel = new SecureLetuNetworkThread(url,
-						getApplicationContext(), username, password);
-				startNetworkThread();
-			} // end onClick
-		});
-
-		alert.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
-			public void onClick(DialogInterface dialog, int whichButton) {
-				setTextViewText("Error: credentials not provided");
-			} // end run
-		});
-
-		alert.show();
+		if (username == null || password == null) {
+			
+			// Get username and password from user
+			AlertDialog.Builder alert = new AlertDialog.Builder(this);
+			alert.setTitle("Credentials");
+			alert.setMessage("Enter username and password");
+			final EditText nameText = new EditText(this);
+			nameText.setHint("Username");
+			final EditText passText = new EditText(this);
+			passText.setHint("Password");
+			passText.setInputType(InputType.TYPE_CLASS_TEXT | 
+					InputType.TYPE_TEXT_VARIATION_PASSWORD);
+			TableLayout tbl = new TableLayout(this);
+			tbl.addView(nameText);
+			tbl.addView(passText);
+			alert.setView(tbl);
+			
+			alert.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+				public void onClick(DialogInterface dialog, int whichButton) {
+					username = nameText.getText().toString();
+					password = passText.getText().toString();
+					initNetwork();
+				} // end onClick
+			});
+			alert.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+				public void onClick(DialogInterface dialog, int whichButton) {
+					setTextViewText("Error: credentials not provided");
+				} // end run
+			});
+			alert.show();
+			
+		} else {
+			initNetwork();
+		} // end if-else
 		
 	} // end initActivityObjects
 	
 	/**
 	 * Parses through the data from the network.
-	 * Should read in the list of chapels and
+	 * Reads in the list of chapels and
 	 * credits and display them in a table
 	 * 
 	 * @author Devon Johnson
@@ -245,7 +284,7 @@ public class ChapAttActivity extends MenuActivity {
 				
 				TableRow row = new TableRow(this);
 				if (chap.getCredits() > 0)
-					row.setBackgroundColor(0xFFFFC000);
+					row.setBackgroundColor(getResources().getColor(R.color.LeTournApp_color_yellow));
 				else
 					row.setBackgroundColor(Color.WHITE);
 				
@@ -254,14 +293,14 @@ public class ChapAttActivity extends MenuActivity {
 	        	tv1.setBackgroundResource(R.drawable.table_row_border);
 	        	tv1.setGravity(Gravity.CENTER);
 	        	tv1.setPadding(15, 20, 15, 20);
-	        	tv1.setTextSize(20);
+	        	tv1.setTextSize(16);
 	        	
 	        	TextView tv2 = new TextView(this);
 	        	tv2.setText(chap.getDescription());
 	        	tv2.setBackgroundResource(R.drawable.table_row_border);
 	        	tv2.setGravity(Gravity.LEFT);
 	        	tv2.setPadding(15, 20, 15, 20);
-	        	tv2.setTextSize(20);
+	        	tv2.setTextSize(16);
 	        	tv2.setLines(2);
 	        	
 	        	row.addView(tv1);
@@ -283,6 +322,22 @@ public class ChapAttActivity extends MenuActivity {
 		} // end try-catch
 		
 	} // end parseData
+	
+	/**
+	 * Initializes the network thread with
+	 * the given username and password. If
+	 * username or password not initialized,
+	 * does nothing.
+	 * 
+	 * @author Devon Johnson
+	 */
+	private void initNetwork() {
+		if (username == null || password == null)
+			return;
+		networkChannel = new SecureLetuNetworkThread(url,
+				getApplicationContext(), username, password);
+		startNetworkThread();
+	} // end initNetwork
 	
 	private void setTextViewText(String text) {
 		
@@ -358,9 +413,9 @@ public class ChapAttActivity extends MenuActivity {
 		
 	} // end ChapelOpportunity class
 
-	private class ChapelClickListener implements OnClickListener {
-		ChapelOpportunity chap;
-		Context context;
+	private static class ChapelClickListener implements OnClickListener {
+		private ChapelOpportunity chap;
+		private Context context;
 		
 		public ChapelClickListener(ChapelOpportunity chap, Context context) {
 			this.chap = chap;
@@ -381,14 +436,11 @@ public class ChapAttActivity extends MenuActivity {
 			alert.setView(tv);
 			
 			alert.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
-				
 				@Override
-				public void onClick(DialogInterface arg0, int arg1) {
-					// TODO Auto-generated method stub
-					
+				public void onClick(DialogInterface dialog, int arg1) {
+					dialog.dismiss();
 				}
 			});
-			
 			alert.show();
 			
 		} // end run

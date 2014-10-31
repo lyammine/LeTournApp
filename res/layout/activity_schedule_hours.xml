@@ -1,0 +1,437 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ScrollView1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/LeTournApp_color_blue"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.swengr2_di_dj_ly.letournapp_v1_0.ScheduleHoursActivity" >
+
+    <RelativeLayout
+        android:id="@+id/masterRelLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+        
+        <TextView
+        	android:id="@+id/ASC_Top_Label"
+        	android:layout_width="match_parent"
+        	android:layout_height="wrap_content"
+        	android:layout_alignParentTop="true"
+        	android:layout_alignParentLeft="true"
+        	android:layout_marginBottom="5dp"
+        	android:textSize="20sp"
+        	android:textColor="@color/LeTournApp_color_yellow"
+        	android:text="@string/Building_ASC" />
+        
+        <TableLayout
+            android:id="@+id/ASC_Table"
+            android:layout_below="@+id/ASC_Top_Label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="25dp"
+            android:background="@color/LeTournApp_color_yellow" >
+            
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/table_row_border"
+                android:paddingTop="3dp"
+                android:paddingBottom="3dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp" >
+                
+                <TextView
+                    android:textSize="18sp"
+                    android:textColor="#000000"
+                    android:text="@string/Room_ASC_Main"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="left" />
+                
+                <TextView
+                    android:id="@+id/Editable_ASC_Main_Hours"
+                    android:textSize="18sp"
+                    android:textColor="#000000"
+                    android:text="@string/Hours_Placeholder_Text"
+                    android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="right" />
+                
+            </TableRow>
+            
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/table_row_border"
+                android:paddingTop="3dp"
+                android:paddingBottom="3dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp" >
+                
+                <TextView
+                    android:textSize="18sp"
+                    android:textColor="#000000"
+                    android:text="@string/Room_ASC_Hive"
+                    android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="left" />
+                
+                <TextView
+                    android:id="@+id/Editable_ASC_Hive_Hours"
+                    android:textSize="18sp"
+                    android:textColor="#000000"
+                    android:text="@string/Hours_Placeholder_Text"
+                    android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="right" />
+                
+            </TableRow>
+            
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/table_row_border"
+                android:paddingTop="3dp"
+                android:paddingBottom="3dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp" >
+                
+                <TextView
+                    android:textSize="18sp"
+                    android:textColor="#000000"
+                    android:text="@string/Room_ASC_Coffee"
+                    android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="left" />
+                
+                <TextView
+                    android:id="@+id/Editable_ASC_Coffee_Hours"
+                    android:textSize="18sp"
+                    android:textColor="#000000"
+                    android:text="@string/Hours_Placeholder_Text"
+                    android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="right" />
+                
+            </TableRow>
+            
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/table_row_border"
+                android:paddingTop="3dp"
+                android:paddingBottom="3dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp" >
+                
+                <TextView
+                    android:textSize="18sp"
+                    android:textColor="#000000"
+                    android:text="@string/Room_ASC_Mail"
+                    android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="left" />
+                
+                <TextView
+                    android:id="@+id/Editable_ASC_Mail_Hours"
+                    android:textSize="18sp"
+                    android:textColor="#000000"
+                    android:text="@string/Hours_Placeholder_Text"
+                    android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="right" />
+                
+            </TableRow>
+            
+        </TableLayout>
+        
+        <TextView
+        	android:id="@+id/Services_Top_Label"
+        	android:layout_width="match_parent"
+        	android:layout_height="wrap_content"
+        	android:layout_marginBottom="5dp"
+        	android:layout_below="@+id/ASC_Table"
+        	android:textSize="20sp"
+        	android:textColor="@color/LeTournApp_color_yellow"
+        	android:text="@string/Category_Services" />
+        
+        <TableLayout
+            android:id="@+id/Services_Table"
+            android:layout_below="@+id/Services_Top_Label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="25dp"
+            android:background="@color/LeTournApp_color_yellow" >
+            
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/table_row_border"
+                android:paddingTop="3dp"
+                android:paddingBottom="3dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp" >
+                
+                <TextView
+                    android:textSize="18sp"
+                    android:textColor="#000000"
+                    android:text="@string/Subcat_Services_Library"
+                    android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="left" />
+                
+                <TextView
+                    android:id="@+id/Editable_Services_Library_Hours"
+                    android:textSize="18sp"
+                    android:textColor="#000000"
+                    android:text="@string/Hours_Placeholder_Text"
+                    android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="right" />
+                
+            </TableRow>
+            
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/table_row_border"
+                android:paddingTop="3dp"
+                android:paddingBottom="3dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp" >
+                
+                <TextView
+                    android:textSize="18sp"
+                    android:textColor="#000000"
+                    android:text="@string/Subcat_Services_Registrar"
+                    android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="left" />
+                
+                <TextView
+                    android:id="@+id/Editable_Services_Registrar_Hours"
+                    android:textSize="18sp"
+                    android:textColor="#000000"
+                    android:text="@string/Hours_Placeholder_Text"
+                    android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="right" />
+                
+            </TableRow>
+            
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/table_row_border"
+                android:paddingTop="3dp"
+                android:paddingBottom="3dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp" >
+                
+                <TextView
+                    android:textSize="18sp"
+                    android:textColor="#000000"
+                    android:text="@string/Subcat_Services_FinancialAid"
+                    android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="left" />
+                
+                <TextView
+                    android:id="@+id/Editable_Services_FinancialAid_Hours"
+                    android:textSize="18sp"
+                    android:textColor="#000000"
+                    android:text="@string/Hours_Placeholder_Text"
+                    android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="right" />
+                
+            </TableRow>
+            
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/table_row_border"
+                android:paddingTop="3dp"
+                android:paddingBottom="3dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp" >
+                
+                <TextView
+                    android:textSize="18sp"
+                    android:textColor="#000000"
+                    android:text="@string/Subcat_Services_Cashier"
+                    android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="left" />
+                
+                <TextView
+                    android:id="@+id/Editable_Services_Cashier_Hours"
+                    android:textSize="18sp"
+                    android:textColor="#000000"
+                    android:text="@string/Hours_Placeholder_Text"
+                    android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="right" />
+                
+            </TableRow>
+            
+       	</TableLayout>
+       	
+        <TextView
+        	android:id="@+id/SAGA_Top_Label"
+        	android:layout_width="match_parent"
+        	android:layout_height="wrap_content"
+        	android:layout_marginBottom="5dp"
+        	android:layout_below="@+id/Services_Table"
+        	android:textSize="20sp"
+        	android:textColor="@color/LeTournApp_color_yellow"
+        	android:text="@string/Building_SAGA" />
+        
+        <TableLayout
+            android:id="@+id/SAGA_Table"
+            android:layout_below="@+id/SAGA_Top_Label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="25dp"
+            android:background="@color/LeTournApp_color_yellow" >
+            
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/table_row_border"
+                android:paddingTop="3dp"
+                android:paddingBottom="3dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp" >
+                
+                <TextView
+                    android:textSize="18sp"
+                    android:textColor="#000000"
+                    android:text="@string/Meal_SAGA_Breakfast"
+                    android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="left" />
+                
+                <TextView
+                    android:id="@+id/Editable_SAGA_Breakfast_Hours"
+                    android:textSize="18sp"
+                    android:textColor="#000000"
+                    android:text="@string/Hours_Placeholder_Text"
+                    android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="right" />
+                
+            </TableRow>
+            
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/table_row_border"
+                android:paddingTop="3dp"
+                android:paddingBottom="3dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp" >
+                
+                <TextView
+                    android:textSize="18sp"
+                    android:textColor="#000000"
+                    android:text="@string/Meal_SAGA_Lunch"
+                    android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="left" />
+                
+                <TextView
+                    android:id="@+id/Editable_SAGA_Lunch_Hours"
+                    android:textSize="18sp"
+                    android:textColor="#000000"
+                    android:text="@string/Hours_Placeholder_Text"
+                    android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="right" />
+                
+            </TableRow>
+            
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/table_row_border"
+                android:paddingTop="3dp"
+                android:paddingBottom="3dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp" >
+                
+                <TextView
+                    android:textSize="18sp"
+                    android:textColor="#000000"
+                    android:text="@string/Meal_SAGA_Dinner"
+                    android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="left" />
+                
+                <TextView
+                    android:id="@+id/Editable_SAGA_Dinner_Hours"
+                    android:textSize="18sp"
+                    android:textColor="#000000"
+                    android:text="@string/Hours_Placeholder_Text"
+                    android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="right" />
+                
+            </TableRow>
+            
+        </TableLayout>
+        
+        <TextView
+            android:id="@+id/DayText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/SAGA_Table"
+            android:layout_centerHorizontal="true"
+            android:text="@string/Hours_Placeholder_Text"
+            android:textColor="@color/LeTournApp_color_yellow"
+            android:textSize="18sp" />
+        
+        <Button
+            android:layout_below="@+id/DayText"
+            style="@style/MenuButton"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:layout_centerHorizontal="true"
+            android:textSize="18sp"
+            android:text="@string/button_text_hours_change_day"
+            android:onClick="changeDay" />
+        
+    </RelativeLayout>
+
+</ScrollView>
