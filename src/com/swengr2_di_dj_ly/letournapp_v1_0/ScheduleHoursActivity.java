@@ -137,6 +137,47 @@ public class ScheduleHoursActivity extends Activity {
 		R.string.Hours_SAGA_Dinner_Day7
 	};
 	
+	public static final int[] SOLHEIM_MAIN_HOURS = 
+			new int[] {
+		R.string.Hours_Solheim_Main_Day1,
+		R.string.Hours_Solheim_Main_Day2,
+		R.string.Hours_Solheim_Main_Day3,
+		R.string.Hours_Solheim_Main_Day4,
+		R.string.Hours_Solheim_Main_Day5,
+		R.string.Hours_Solheim_Main_Day6,
+		R.string.Hours_Solheim_Main_Day7
+	};
+	public static final int[] SOLHEIM_POOL1_HOURS = 
+			new int[] {
+		R.string.Hours_Solheim_Pool1_Day1,
+		R.string.Hours_Solheim_Pool1_Day2,
+		R.string.Hours_Solheim_Pool1_Day3,
+		R.string.Hours_Solheim_Pool1_Day4,
+		R.string.Hours_Solheim_Pool1_Day5,
+		R.string.Hours_Solheim_Pool1_Day6,
+		R.string.Hours_Solheim_Pool1_Day7
+	};
+	public static final int[] SOLHEIM_POOL2_HOURS = 
+			new int[] {
+		R.string.Hours_Solheim_Pool2_Day1,
+		R.string.Hours_Solheim_Pool2_Day2,
+		R.string.Hours_Solheim_Pool2_Day3,
+		R.string.Hours_Solheim_Pool2_Day4,
+		R.string.Hours_Solheim_Pool2_Day5,
+		R.string.Hours_Solheim_Pool2_Day6,
+		R.string.Hours_Solheim_Pool2_Day7
+	};
+	public static final int[] SOLHEIM_POOL3_HOURS = 
+			new int[] {
+		R.string.Hours_Solheim_Pool3_Day1,
+		R.string.Hours_Solheim_Pool3_Day2,
+		R.string.Hours_Solheim_Pool3_Day3,
+		R.string.Hours_Solheim_Pool3_Day4,
+		R.string.Hours_Solheim_Pool3_Day5,
+		R.string.Hours_Solheim_Pool3_Day6,
+		R.string.Hours_Solheim_Pool3_Day7
+	};
+	
 	public static final int[][] ASC_HOURS = 
 			new int[][] {
 		ASC_MAIN_HOURS,
@@ -157,10 +198,19 @@ public class ScheduleHoursActivity extends Activity {
 		SAGA_LUNCH_HOURS,
 		SAGA_DINNER_HOURS
 	};
+	public static final int[][] SOLHEIM_HOURS = 
+			new int[][] {
+		SOLHEIM_MAIN_HOURS,
+		SOLHEIM_POOL1_HOURS,
+		SOLHEIM_POOL2_HOURS,
+		SOLHEIM_POOL3_HOURS
+	};
 	
 	private TextView[] ascTable;
 	private TextView[] servTable;
 	private TextView[] sagaTable;
+	private TextView[] solheimTable;
+	
 	private TextView dayView;
 	private String[] dayStrings;
 	private int displayDay;
@@ -247,6 +297,7 @@ public class ScheduleHoursActivity extends Activity {
 		ascTable = new TextView[ASC_HOURS.length];
 		servTable = new TextView[SERV_HOURS.length];
 		sagaTable = new TextView[SAGA_HOURS.length];
+		solheimTable = new TextView[SOLHEIM_HOURS.length];
 		
 		ascTable[0] = (TextView)findViewById(R.id.Editable_ASC_Main_Hours);
 		ascTable[1] = (TextView)findViewById(R.id.Editable_ASC_Hive_Hours);
@@ -261,6 +312,11 @@ public class ScheduleHoursActivity extends Activity {
 		sagaTable[0] = (TextView)findViewById(R.id.Editable_SAGA_Breakfast_Hours);
 		sagaTable[1] = (TextView)findViewById(R.id.Editable_SAGA_Lunch_Hours);
 		sagaTable[2] = (TextView)findViewById(R.id.Editable_SAGA_Dinner_Hours);
+		
+		solheimTable[0] = (TextView)findViewById(R.id.Editable_Solheim_Main_Hours);
+		solheimTable[1] = (TextView)findViewById(R.id.Editable_Solheim_Pool1_Hours);
+		solheimTable[2] = (TextView)findViewById(R.id.Editable_Solheim_Pool2_Hours);
+		solheimTable[3] = (TextView)findViewById(R.id.Editable_Solheim_Pool3_Hours);
 		
 		dayView = (TextView)findViewById(R.id.DayText);
 		
@@ -288,6 +344,8 @@ public class ScheduleHoursActivity extends Activity {
 			servTable[i].setText(getString(SERV_HOURS[i][displayDay]));
 		for (int i = 0; i < sagaTable.length; i++)
 			sagaTable[i].setText(getString(SAGA_HOURS[i][displayDay]));
+		for (int i = 0; i < solheimTable.length; i++)
+			solheimTable[i].setText(getString(SOLHEIM_HOURS[i][displayDay]));
 		dayView.setText("Displaying " + dayStrings[displayDay]+ " Hours");
 		return true;
 	} // end updateLabelsToDay

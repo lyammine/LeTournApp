@@ -413,10 +413,152 @@
         </TableLayout>
         
         <TextView
+        	android:id="@+id/Solheim_Top_Label"
+        	android:layout_width="match_parent"
+        	android:layout_height="wrap_content"
+        	android:layout_marginBottom="5dp"
+        	android:layout_below="@+id/SAGA_Table"
+        	android:textSize="20sp"
+        	android:textColor="@color/LeTournApp_color_yellow"
+        	android:text="@string/Building_Solheim" />
+        
+        <TableLayout
+            android:id="@+id/Solheim_Table"
+            android:layout_below="@+id/Solheim_Top_Label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="25dp"
+            android:background="@color/LeTournApp_color_yellow" >
+            
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/table_row_border"
+                android:paddingTop="3dp"
+                android:paddingBottom="3dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp" >
+                
+                <TextView
+                    android:textSize="18sp"
+                    android:textColor="#000000"
+                    android:text="@string/Room_Solheim_Main"
+                    android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="left" />
+                
+                <TextView
+                    android:id="@+id/Editable_Solheim_Main_Hours"
+                    android:textSize="18sp"
+                    android:textColor="#000000"
+                    android:text="@string/Hours_Placeholder_Text"
+                    android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="right" />
+                
+            </TableRow>
+            
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/table_row_border"
+                android:paddingTop="3dp"
+                android:paddingBottom="3dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp" >
+                
+                <TextView
+                    android:textSize="18sp"
+                    android:textColor="#000000"
+                    android:text="@string/Room_Solheim_Pool1"
+                    android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="left" />
+                
+                <TextView
+                    android:id="@+id/Editable_Solheim_Pool1_Hours"
+                    android:textSize="18sp"
+                    android:textColor="#000000"
+                    android:text="@string/Hours_Placeholder_Text"
+                    android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="right" />
+                
+            </TableRow>
+            
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/table_row_border"
+                android:paddingTop="3dp"
+                android:paddingBottom="3dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp" >
+                
+                <TextView
+                    android:textSize="18sp"
+                    android:textColor="#000000"
+                    android:text="@string/Room_Solheim_Pool2"
+                    android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="left" />
+                
+                <TextView
+                    android:id="@+id/Editable_Solheim_Pool2_Hours"
+                    android:textSize="18sp"
+                    android:textColor="#000000"
+                    android:text="@string/Hours_Placeholder_Text"
+                    android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="right" />
+                
+            </TableRow>
+            
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/table_row_border"
+                android:paddingTop="3dp"
+                android:paddingBottom="3dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp" >
+                
+                <TextView
+                    android:textSize="18sp"
+                    android:textColor="#000000"
+                    android:text="@string/Room_Solheim_Pool3"
+                    android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="left" />
+                
+                <TextView
+                    android:id="@+id/Editable_Solheim_Pool3_Hours"
+                    android:textSize="18sp"
+                    android:textColor="#000000"
+                    android:text="@string/Hours_Placeholder_Text"
+                    android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="right" />
+                
+            </TableRow>
+            
+        </TableLayout>
+        
+        <TextView
             android:id="@+id/DayText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/SAGA_Table"
+            android:layout_below="@+id/Solheim_Table"
             android:layout_centerHorizontal="true"
             android:text="@string/Hours_Placeholder_Text"
             android:textColor="@color/LeTournApp_color_yellow"

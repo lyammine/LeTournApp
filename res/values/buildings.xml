@@ -21,4 +21,11 @@
     <string name="Meal_SAGA_Lunch">Lunch</string>
     <string name="Meal_SAGA_Dinner">Dinner</string>
     
+    <string name="Building_Solheim">Solheim</string>
+    
+    <string name="Room_Solheim_Main">Solheim</string>
+    <string name="Room_Solheim_Pool1">Pool Morning</string>
+    <string name="Room_Solheim_Pool2">Pool Mid-Day</string>
+    <string name="Room_Solheim_Pool3">Pool Evening</string>
+    
 </resources>
