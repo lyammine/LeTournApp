@@ -56,3 +56,4 @@ public final class LetuSharedPreferences {
 	} // end loadLetuPreference
 	
 } // end LetuSharedPreferences class
+
