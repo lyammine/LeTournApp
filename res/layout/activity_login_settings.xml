@@ -70,7 +70,8 @@
         android:layout_alignLeft="@+id/password_textField"
         android:layout_below="@+id/password_textField"
         android:layout_marginTop="59dp"
-        android:text="@string/button_text_save" />
+        android:text="@string/button_text_save"
+        android:onClick="onSave" />
 
     <Button
         android:id="@+id/clear_button"
@@ -80,6 +81,7 @@
         android:layout_alignBaseline="@+id/save_button"
         android:layout_alignBottom="@+id/save_button"
         android:layout_alignRight="@+id/password_textField"
-        android:text="@string/button_text_clear" />
+        android:text="@string/button_text_clear"
+        android:onClick="onClear" />
 
 </RelativeLayout>

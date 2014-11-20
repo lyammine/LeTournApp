@@ -38,9 +38,6 @@ public class ChapAttActivity extends MenuActivity {
 	private String username;
 	private String password;
 	
-	public static final String SAVED_USERNAME_KEY = "Username";
-	public static final String SAVED_PASSWORD_KEY = "Password";
-	
 	protected ArrayList<ChapelOpportunity> chapels;
 
 	@Override
@@ -49,10 +46,7 @@ public class ChapAttActivity extends MenuActivity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_chap_att);
 		
-		if (savedInstanceState != null) {
-			username = savedInstanceState.getString(SAVED_USERNAME_KEY);
-			password = savedInstanceState.getString(SAVED_PASSWORD_KEY);
-		} // end if
+		loadStoredCreds();
 		
 		initActivityObjects();
 		
@@ -75,15 +69,6 @@ public class ChapAttActivity extends MenuActivity {
 			return true;
 		}
 		return super.onOptionsItemSelected(item);
-	}
-
-	@Override
-	protected void onSaveInstanceState(Bundle outState) {
-		if (username != null && password != null) {
-			outState.putString(SAVED_USERNAME_KEY, username);
-			outState.putString(SAVED_PASSWORD_KEY, password);
-		}
-		super.onSaveInstanceState(outState);
 	}
 	
 	@Override
@@ -116,8 +101,20 @@ public class ChapAttActivity extends MenuActivity {
 	 * @author Devon Johnson
 	 */
 	public void refreshPage(View view) {
+		loadStoredCreds();
 		initActivityObjects();
 	} // end refresh
+	
+	private void loadStoredCreds() {
+		String user = LetuSharedPreferences.loadLetuPreference(this, LoginSettings.USER_KEY, null);
+		String pass = LetuSharedPreferences.loadLetuPreference(this, LoginSettings.PASS_KEY, null);
+		
+		if (user != null && pass != null) {
+			username = LoginSettings.encrypt(user);
+			password = LoginSettings.encrypt(pass);
+		} // end if
+		
+	} // end loadStoredCreds
 	
 	/**
 	 * Inflates the UI objects for use in
@@ -137,7 +134,8 @@ public class ChapAttActivity extends MenuActivity {
 		chapelTable = (TableLayout) findViewById(R.id.myTableLayout);
 		chapelTable.removeAllViews();
 		
-		if (username == null || password == null) {
+		if (username == null || password == null ||
+				username == "" || password == "") {
 			
 			// Get username and password from user
 			AlertDialog.Builder alert = new AlertDialog.Builder(this);
@@ -416,32 +414,38 @@ public class ChapAttActivity extends MenuActivity {
 	private static class ChapelClickListener implements OnClickListener {
 		private ChapelOpportunity chap;
 		private Context context;
+		private boolean displayed;
 		
 		public ChapelClickListener(ChapelOpportunity chap, Context context) {
 			this.chap = chap;
 			this.context = context;
+			displayed = false;
 		} // end constructor
 		
 		@Override
 		public void onClick(View v) {
-			AlertDialog.Builder alert = new AlertDialog.Builder(
-					context);
-			TextView tv = new TextView(context);
-			tv.setText(chap.getDescription() + "\n\n" +
-					chap.getDate() + "\n" + chap.getTime()
-					+ "\n\n" + "Credits: " + chap.getCredits()
-					+ " out of a possible " + chap.getPossibleCredits());
-			tv.setTextSize(18);
-			tv.setPadding(15, 15, 15, 15);
-			alert.setView(tv);
-			
-			alert.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
-				@Override
-				public void onClick(DialogInterface dialog, int arg1) {
-					dialog.dismiss();
-				}
-			});
-			alert.show();
+			if (!displayed) {
+				displayed = true;
+				AlertDialog.Builder alert = new AlertDialog.Builder(
+						context);
+				TextView tv = new TextView(context);
+				tv.setText(chap.getDescription() + "\n\n" +
+						chap.getDate() + "\n" + chap.getTime()
+						+ "\n\n" + "Credits: " + chap.getCredits()
+						+ " out of a possible " + chap.getPossibleCredits());
+				tv.setTextSize(18);
+				tv.setPadding(15, 15, 15, 15);
+				alert.setView(tv);
+				
+				alert.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+					@Override
+					public void onClick(DialogInterface dialog, int arg1) {
+						dialog.dismiss();
+						displayed = false;
+					}
+				});
+				alert.show();
+			} // end if not currently displayed
 			
 		} // end run
 		
