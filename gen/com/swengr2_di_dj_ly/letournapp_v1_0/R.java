@@ -31,49 +31,57 @@ public final class R {
         public static final int table_row_border=0x7f020002;
     }
     public static final class id {
-        public static final int ASC_Table=0x7f09000d;
-        public static final int ASC_Top_Label=0x7f09000c;
-        public static final int DayText=0x7f09001d;
-        public static final int Editable_ASC_Coffee_Hours=0x7f090010;
-        public static final int Editable_ASC_Hive_Hours=0x7f09000f;
-        public static final int Editable_ASC_Mail_Hours=0x7f090011;
-        public static final int Editable_ASC_Main_Hours=0x7f09000e;
-        public static final int Editable_SAGA_Breakfast_Hours=0x7f09001a;
-        public static final int Editable_SAGA_Dinner_Hours=0x7f09001c;
-        public static final int Editable_SAGA_Lunch_Hours=0x7f09001b;
-        public static final int Editable_Services_Cashier_Hours=0x7f090017;
-        public static final int Editable_Services_FinancialAid_Hours=0x7f090016;
-        public static final int Editable_Services_Library_Hours=0x7f090014;
-        public static final int Editable_Services_Registrar_Hours=0x7f090015;
+        public static final int ASC_Table=0x7f090013;
+        public static final int ASC_Top_Label=0x7f090012;
+        public static final int DayText=0x7f090023;
+        public static final int Editable_ASC_Coffee_Hours=0x7f090016;
+        public static final int Editable_ASC_Hive_Hours=0x7f090015;
+        public static final int Editable_ASC_Mail_Hours=0x7f090017;
+        public static final int Editable_ASC_Main_Hours=0x7f090014;
+        public static final int Editable_SAGA_Breakfast_Hours=0x7f090020;
+        public static final int Editable_SAGA_Dinner_Hours=0x7f090022;
+        public static final int Editable_SAGA_Lunch_Hours=0x7f090021;
+        public static final int Editable_Services_Cashier_Hours=0x7f09001d;
+        public static final int Editable_Services_FinancialAid_Hours=0x7f09001c;
+        public static final int Editable_Services_Library_Hours=0x7f09001a;
+        public static final int Editable_Services_Registrar_Hours=0x7f09001b;
         public static final int RelativeLayout1=0x7f090002;
-        public static final int SAGA_Table=0x7f090019;
-        public static final int SAGA_Top_Label=0x7f090018;
+        public static final int SAGA_Table=0x7f09001f;
+        public static final int SAGA_Top_Label=0x7f09001e;
         public static final int ScrollView1=0x7f090000;
-        public static final int Services_Table=0x7f090013;
-        public static final int Services_Top_Label=0x7f090012;
-        public static final int action_settings=0x7f09001e;
-        public static final int announc_button=0x7f090008;
+        public static final int Services_Table=0x7f090019;
+        public static final int Services_Top_Label=0x7f090018;
+        public static final int action_settings=0x7f090024;
+        public static final int announc_button=0x7f09000e;
         public static final int chapAttRefreshButton=0x7f090004;
-        public static final int chap_att_button=0x7f090007;
+        public static final int chap_att_button=0x7f09000d;
+        public static final int clear_button=0x7f09000c;
         public static final int horizontalView=0x7f090005;
-        public static final int hours_button=0x7f090009;
-        public static final int login_info_button=0x7f09000a;
-        public static final int masterRelLayout=0x7f09000b;
+        public static final int hours_button=0x7f09000f;
+        public static final int login_info_button=0x7f090010;
+        public static final int masterRelLayout=0x7f090011;
         public static final int myScrollView=0x7f090003;
         public static final int myTableLayout=0x7f090006;
+        public static final int password_textField=0x7f090009;
+        public static final int password_textView=0x7f09000a;
+        public static final int save_button=0x7f09000b;
         public static final int textView1=0x7f090001;
+        public static final int username_textField=0x7f090008;
+        public static final int username_textView=0x7f090007;
     }
     public static final class layout {
         public static final int activity_announcements=0x7f030000;
         public static final int activity_chap_att=0x7f030001;
-        public static final int activity_main=0x7f030002;
-        public static final int activity_schedule_hours=0x7f030003;
+        public static final int activity_login_settings=0x7f030002;
+        public static final int activity_main=0x7f030003;
+        public static final int activity_schedule_hours=0x7f030004;
     }
     public static final class menu {
         public static final int announcements=0x7f080000;
         public static final int chap_att=0x7f080001;
-        public static final int main=0x7f080002;
-        public static final int schedule_hours=0x7f080003;
+        public static final int login_settings=0x7f080002;
+        public static final int main=0x7f080003;
+        public static final int schedule_hours=0x7f080004;
     }
     public static final class string {
         public static final int Building_ASC=0x7f040000;
@@ -172,15 +180,22 @@ public final class R {
         public static final int app_name=0x7f04005c;
         public static final int button_text_announcements=0x7f040060;
         public static final int button_text_chap_att=0x7f04005f;
-        public static final int button_text_chap_att_refresh=0x7f040067;
+        public static final int button_text_chap_att_refresh=0x7f04006d;
+        public static final int button_text_clear=0x7f040064;
         public static final int button_text_hours=0x7f040061;
-        public static final int button_text_hours_change_day=0x7f040068;
+        public static final int button_text_hours_change_day=0x7f04006e;
         public static final int button_text_login_info=0x7f040062;
-        public static final int chap_att_label_initial_text=0x7f040066;
+        public static final int button_text_save=0x7f040063;
+        public static final int chap_att_label_initial_text=0x7f04006c;
         public static final int hello_world=0x7f04005d;
-        public static final int title_activity_announcements=0x7f040064;
-        public static final int title_activity_chap_att=0x7f040063;
-        public static final int title_activity_schedule_hours=0x7f040065;
+        public static final int label_password=0x7f040068;
+        public static final int label_username=0x7f040065;
+        public static final int password_hint=0x7f040067;
+        public static final int title_activity_announcements=0x7f04006a;
+        public static final int title_activity_chap_att=0x7f040069;
+        public static final int title_activity_login_settings=0x7f04006f;
+        public static final int title_activity_schedule_hours=0x7f04006b;
+        public static final int username_hint=0x7f040066;
     }
     public static final class style {
         /** 
