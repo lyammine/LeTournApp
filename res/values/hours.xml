@@ -3,13 +3,13 @@
     
     <string name="Hours_Placeholder_Text">Loading&#8230;</string>
     
-    <string name="Hours_ASC_Main_Day1">7:00 am-2:00 am</string>
-    <string name="Hours_ASC_Main_Day2">7:00 am-2:00 am</string>
-    <string name="Hours_ASC_Main_Day3">7:00 am-2:00 am</string>
-    <string name="Hours_ASC_Main_Day4">7:00 am-2:00 am</string>
-    <string name="Hours_ASC_Main_Day5">7:00 am-2:00 am</string>
-    <string name="Hours_ASC_Main_Day6">7:00 am-2:00 am</string>
-    <string name="Hours_ASC_Main_Day7">7:00 am-2:00 am</string>
+    <string name="Hours_ASC_Main_Day1">6:15 am-2:00 am</string>
+    <string name="Hours_ASC_Main_Day2">6:15 am-2:00 am</string>
+    <string name="Hours_ASC_Main_Day3">6:15 am-2:00 am</string>
+    <string name="Hours_ASC_Main_Day4">6:15 am-2:00 am</string>
+    <string name="Hours_ASC_Main_Day5">6:15 am-2:00 am</string>
+    <string name="Hours_ASC_Main_Day6">10:00 am-2:00 am</string>
+    <string name="Hours_ASC_Main_Day7">1:00 pm-2:00 am</string>
     
     <string name="Hours_ASC_Hive_and_Coffee_Day1">6:30 am-11:00 pm</string>
     <string name="Hours_ASC_Hive_and_Coffee_Day2">6:30 am-11:00 pm</string>
@@ -82,5 +82,37 @@
     <string name="Hours_SAGA_Dinner_Day5">4:45 pm-7:00 pm</string>
     <string name="Hours_SAGA_Dinner_Day6">4:45 pm-6:00 pm</string>
     <string name="Hours_SAGA_Dinner_Day7">Closed</string>
+    
+    <string name="Hours_Solheim_Main_Day1">6:30 am-10:00 pm</string>
+    <string name="Hours_Solheim_Main_Day2">6:30 am-10:00 pm</string>
+    <string name="Hours_Solheim_Main_Day3">6:30 am-10:00 pm</string>
+    <string name="Hours_Solheim_Main_Day4">6:30 am-10:00 pm</string>
+    <string name="Hours_Solheim_Main_Day5">6:30 am-10:00 pm</string>
+    <string name="Hours_Solheim_Main_Day6">10:00 am-10:00 pm</string>
+    <string name="Hours_Solheim_Main_Day7">2:00 pm-10:00 pm</string>
+    
+    <string name="Hours_Solheim_Pool1_Day1">6:30 am-8:00 am</string>
+    <string name="Hours_Solheim_Pool1_Day2">6:30 am-8:00 am</string>
+    <string name="Hours_Solheim_Pool1_Day3">6:30 am-8:00 am</string>
+    <string name="Hours_Solheim_Pool1_Day4">6:30 am-8:00 am</string>
+    <string name="Hours_Solheim_Pool1_Day5">6:30 am-8:00 am</string>
+    <string name="Hours_Solheim_Pool1_Day6">None</string>
+    <string name="Hours_Solheim_Pool1_Day7">None</string>
+    
+    <string name="Hours_Solheim_Pool2_Day1">11:45 am-1:30 pm</string>
+    <string name="Hours_Solheim_Pool2_Day2">11:30 am-1:30 pm</string>
+    <string name="Hours_Solheim_Pool2_Day3">11:45 am-1:30 pm</string>
+    <string name="Hours_Solheim_Pool2_Day4">None</string>
+    <string name="Hours_Solheim_Pool2_Day5">11:45 am-1:30 pm</string>
+    <string name="Hours_Solheim_Pool2_Day6">11:00 am-3:00 pm</string>
+    <string name="Hours_Solheim_Pool2_Day7">None</string>
+    
+    <string name="Hours_Solheim_Pool3_Day1">7:00 pm-9:00 pm</string>
+    <string name="Hours_Solheim_Pool3_Day2">None</string>
+    <string name="Hours_Solheim_Pool3_Day3">7:00 pm-9:00 pm</string>
+    <string name="Hours_Solheim_Pool3_Day4">7:00 pm-9:00 pm</string>
+    <string name="Hours_Solheim_Pool3_Day5">7:00 pm-9:00 pm</string>
+    <string name="Hours_Solheim_Pool3_Day6">None</string>
+    <string name="Hours_Solheim_Pool3_Day7">4:00 pm-7:00 pm</string>
     
 </resources>
