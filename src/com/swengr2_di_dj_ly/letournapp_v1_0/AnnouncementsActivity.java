@@ -205,8 +205,8 @@ public class AnnouncementsActivity extends MenuActivity {
 	        	textView.setText(rssItem.getTitle());
 	        	textView.setBackgroundResource(R.drawable.table_row_border);
 	        	textView.setGravity(Gravity.LEFT);
-	        	textView.setPadding(15, 20, 15, 20);
-	        	textView.setTextSize(18);
+	        	textView.setPadding(15, 15, 15, 15);
+	        	textView.setTextSize(16);
 	        	
 	        	row.addView(textView);
 	        	row.setOnClickListener(new AnnouncementListener(rssItem, this));

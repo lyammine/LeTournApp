@@ -4,6 +4,7 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:fillViewport="true"
+    android:background="#ff000000"
     tools:context="com.swengr2_di_dj_ly.letournapp_v1_0.AnnouncementsActivity" >
 
     <HorizontalScrollView
@@ -14,7 +15,8 @@
 	    <TableLayout
 	        android:id="@+id/announcementsTable"
 	        android:layout_width="wrap_content"
-	        android:layout_height="wrap_content" >
+	        android:layout_height="wrap_content"
+	        android:textColor="#ffffff" >
 	    </TableLayout>
 	    
 	</HorizontalScrollView>
