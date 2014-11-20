@@ -95,15 +95,15 @@ public class LoginSettings extends Activity {
 	* @return the encrypted text
 	*/
 	public static String encrypt(String plaintext){
-		String key = ",.nqwekfxzx";
+		String key = "nqwekfxzx";
 		if(key.length() <= 0) return plaintext;
 		String ciphertext = "";
 		while(key.length() < plaintext.length()){
-		key += key;
+			key += key;
 		}
 		key = key.substring(0, plaintext.length());
 		for(int i = 0; i < plaintext.length(); i++){
-		ciphertext += (char)((int)plaintext.charAt(i)^(int)key.charAt(i));
+			ciphertext += (char)((int)plaintext.charAt(i)^(int)key.charAt(i));
 		}
 		return ciphertext;
 	}

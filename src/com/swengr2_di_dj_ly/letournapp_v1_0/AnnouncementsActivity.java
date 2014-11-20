@@ -12,6 +12,7 @@ import org.xmlpull.v1.XmlPullParserFactory;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.Menu;
@@ -205,12 +206,14 @@ public class AnnouncementsActivity extends MenuActivity {
 	        	textView.setText(rssItem.getTitle());
 	        	textView.setBackgroundResource(R.drawable.table_row_border);
 	        	textView.setGravity(Gravity.LEFT);
-	        	textView.setPadding(15, 20, 15, 20);
-	        	textView.setTextSize(18);
+	        	textView.setPadding(30, 30, 30, 30);
+	        	textView.setTextSize(20);
+	        	textView.setTextColor(Color.WHITE);
 	        	
 	        	row.addView(textView);
 	        	row.setOnClickListener(new AnnouncementListener(rssItem, this));
 	        	addRowToTable(row);
+	        	
 			} // end for
 			
 		} catch (Exception e) { 
