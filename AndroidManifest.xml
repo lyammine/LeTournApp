@@ -49,6 +49,14 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.swengr2_di_dj_ly.letournapp_v1_0.MainActivity" />
         </activity>
+        <activity
+            android:name=".LoginSettings"
+            android:label="@string/title_activity_login_settings"
+            android:parentActivityName=".MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.swengr2_di_dj_ly.letournapp_v1_0.MainActivity" />
+        </activity>
     </application>
 
 </manifest>

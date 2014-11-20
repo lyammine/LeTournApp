@@ -61,6 +61,10 @@ public class MainActivity extends Activity {
     	openNewWindow(ScheduleHoursActivity.class);
     }
     
+    public void loginSettingsButtonPressed(View view){
+    	openNewWindow(LoginSettings.class);
+    }
+    
     private void openNewWindow(Class<?> cls) {
     	Intent intent = new Intent(this, cls);
     	startActivity(intent);
