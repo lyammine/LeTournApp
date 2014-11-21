@@ -41,6 +41,7 @@
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="@dimen/activity_vertical_margin"
         android:layout_alignLeft="@+id/hours_button"
-        android:text="@string/button_text_login_info"/>
+        android:text="@string/button_text_login_info"
+        android:onClick="loginSettingsButtonPressed" />
 
 </RelativeLayout>
